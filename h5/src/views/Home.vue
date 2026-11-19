@@ -16,7 +16,7 @@
       <div class="row2"><div class="cw2" v-for="h in user.history.slice(0, 10)" :key="h.id" @click="$router.push({ path: `/play/${h.id}`, query: { ep: h.ep } })"><div class="pi"><img loading="lazy" decoding="async" :src="h.image" referrerpolicy="no-referrer" /><span class="cwplay"><Icon name="play" :size="16" fill /></span><i class="bar" :style="{ width: (h.ep / h.episodes * 100) + '%' }"></i></div><div class="pt">{{ cleanTitle(h.title) }}</div><div class="pg">{{ $t('player.desc', { a: h.ep, b: h.episodes }) }}</div></div></div></template>
     <div class="sec2"><h2>🔥 {{ $t('home.top10') }}</h2><router-link :to="{ path: '/discover', query: { t: 'top' } }"><Icon name="right" :size="18" /></router-link></div>
     <div class="row2 top10"><Poster v-for="(d, i) in home.top.slice(0, 10)" :key="d.id" :d="d" :rank="i + 1" /></div>
-    <div class="gamecard2" data-t="home-games" @click="$router.push('/games')"><div><span class="newb">NEW</span><b>{{ $t('home.interactive') }}</b><p>{{ $t('home.interactiveDesc') }}</p></div><span class="gi">🎮</span></div>
+    <div class="gamecard2" data-t="home-games" :data-games-entry="gamesEntry" @click="$router.push('/games')"><div><span class="newb">NEW</span><b>{{ $t('home.interactive') }}</b><p v-if="gamesEntry === 'live'">{{ $t('home.interactiveLive') }}</p><p v-else-if="gamesEntry === 'soon'">{{ $t('home.interactiveDesc') }}</p><p v-else>{{ $t('home.interactiveNeutral') }}</p></div><span class="gi">🎮</span></div>
     <div class="studiomini" data-t="home-studio" @click="$router.push('/studio')"><Icon name="tv" :size="18" /><span>{{ $t('m3.studio.homeCta') }}</span><Icon name="right" :size="14" /></div>
     <div class="sec2"><h2>{{ $t('home.must') }}</h2><router-link to="/discover"><Icon name="right" :size="18" /></router-link></div>
     <div class="row2"><template v-if="loading"><div class="pc" v-for="i in 3" :key="i"><div class="pi skel"></div></div></template><Poster v-for="d in home.must" :key="d.id" :d="d" tag="Hot" genre /></div>
@@ -36,6 +36,8 @@
 import { brand } from '../brand'
 import { ref, reactive, computed, onMounted, onUnmounted , watch } from 'vue'
 import { getHome, getBanners, getCategories } from '../api'
+import { listGames } from '../api/games'
+import { gamesEntryState, type GamesEntry } from '../gamesEntry'
 import { STAGING_LIB, libList } from '../api/staging'
 import Poster from '../components/Poster.vue'
 import NoticeBar from '../components/NoticeBar.vue'
@@ -47,6 +49,7 @@ import { useI18n } from 'vue-i18n'
 defineOptions({ name: 'Home' })
 const user = useUser(); const { t } = useI18n()
 const home = reactive({ must: [] as any[], news: [] as any[], top: [] as any[] }); const banners = ref<any[]>([]); const cats = ref<any[]>([]); const hi = ref(0); const loading = ref(true); const rk = ref('top'); const solid = ref(false)
+const gamesEntry = ref<GamesEntry>('unknown')
 // B7 #10: hero = top/must; when those are empty (e.g. a content language with no ranked titles) fall back to /block/index
 // banners, and once loading is over with nothing to show the hero is hidden instead of leaving a blank skeleton
 const heroes = computed(() => { const a = [...(home.top || []).slice(0, 3), ...(home.must || []).slice(0, 2)].filter((d, i, a) => d?.image && a.findIndex(x => x.id === d.id) === i)
@@ -58,6 +61,10 @@ const fav = (d: any) => toast(t(user.toggleFav({ id: d.id, title: d.title, image
 watch(() => heroes.value.length, n => { if (hi.value >= n) hi.value = 0 })
 let timer: any
 onMounted(async () => {
+  listGames({ page: 1, pagesize: 20 }).then(r => {
+    if (r.code !== 1) { gamesEntry.value = 'unknown'; return }
+    gamesEntry.value = gamesEntryState(Math.max(r.data?.list?.length ?? 0, Number(r.data?.total) || 0))
+  }).catch(() => { gamesEntry.value = 'unknown' })
   const [h, b, c, s] = await Promise.all([getHome(), getBanners(), getCategories(), STAGING_LIB ? libList() : Promise.resolve({ data: [] } as any)])
   Object.assign(home, h.data || {}); banners.value = b.data || []; cats.value = c.data?.[0]?.children || []; loading.value = false
   // staging library (MIRE_CONFIG.stagingLibrary): newly published works lead "Must watch" and "New releases"
