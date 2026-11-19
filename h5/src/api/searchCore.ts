@@ -39,6 +39,22 @@ export function titleMatchesQuery(title: string, query: string): boolean {
   return shown.includes(q) || raw.includes(q) || squash(shown).includes(squash(q))
 }
 
+export type SearchSource = { ok: boolean; denied?: boolean; data: unknown }
+
+/**
+ * Merge catalog search with the optional compact-title request and the staging library.
+ * - Same id (42 and "42") is kept once, first source wins: primary, then variant, then staging.
+ * - Variant and staging rows must match the query. They are omitted when that request failed or was 401/403.
+ * - A failed or 401/403 primary drops every source, so an auth failure cannot be filled in from another call.
+ * - A failed variant or staging does not drop primary rows and does not mark the search failed.
+ */
+export function planSearchMerge(query: string, sources: { primary: SearchSource; variant?: SearchSource | null; staging?: SearchSource | null }): { rows: any[]; failed: boolean } {
+  if (!sources.primary.ok || sources.primary.denied) return { rows: [], failed: true }
+  const variant = sources.variant && sources.variant.ok && !sources.variant.denied ? sources.variant.data : undefined
+  const staging = sources.staging && sources.staging.ok && !sources.staging.denied ? sources.staging.data : undefined
+  return { rows: assembleSearchResults(query, { primary: sources.primary.data, variant, staging }), failed: false }
+}
+
 export function assembleSearchResults(query: string, parts: { primary: unknown; variant?: unknown; staging?: unknown }): any[] {
   const q = String(query || '').trim()
   if (!q) return []
@@ -48,7 +64,7 @@ export function assembleSearchResults(query: string, parts: { primary: unknown; 
   const seen = new Set<string>()
   const out: any[] = []
   for (const d of [...primary, ...variant, ...staging]) {
-    const id = d?.id == null ? '' : String(d.id)
+    const id = d?.id == null ? '' : String(d.id).trim()
     if (!id || seen.has(id)) continue
     seen.add(id)
     out.push(d)

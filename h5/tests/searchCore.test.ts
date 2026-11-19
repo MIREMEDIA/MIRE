@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { assembleSearchResults, compactQuery, shownTitle, titleMatchesQuery } from '../src/api/searchCore.ts'
+import { assembleSearchResults, compactQuery, planSearchMerge, shownTitle, titleMatchesQuery } from '../src/api/searchCore.ts'
 import { cleanTitle } from '../src/utils.ts'
 
 const rotiRaw = { id: 42, title: 'RotiDanEmas', image: 'a' }
@@ -32,6 +32,46 @@ test('staging library row visible on home is searchable', () => {
 test('primary hits are kept and duplicate ids collapse', () => {
   const rows = assembleSearchResults('Roti Dan Emas', { primary: [rotiRaw], variant: [rotiRaw], staging: [rotiStaging] })
   assert.deepEqual(rows.map(r => r.id), [42, 's7'])
+})
+
+test('same id is kept once even when the type differs', () => {
+  const rows = assembleSearchResults('Roti Dan Emas', { primary: [{ id: 42, title: 'RotiDanEmas' }], variant: [{ id: '42', title: 'RotiDanEmas' }], staging: [{ id: ' 42 ', title: 'Roti Dan Emas' }] })
+  assert.deepEqual(rows.map(r => r.id), [42])
+})
+
+test('extra requests cannot add rows that do not match the query', () => {
+  const rows = assembleSearchResults('Roti Dan Emas', { primary: [], variant: [other, { id: 8, title: 'Gold' }], staging: [{ id: 's1', title: 'Hidden Draft' }] })
+  assert.deepEqual(rows, [])
+})
+
+test('primary auth failure discards variant and staging', () => {
+  const merged = planSearchMerge('Roti Dan Emas', {
+    primary: { ok: true, denied: true, data: [] },
+    variant: { ok: true, data: [rotiRaw] },
+    staging: { ok: true, data: [rotiStaging] },
+  })
+  assert.equal(merged.failed, true)
+  assert.deepEqual(merged.rows, [])
+})
+
+test('a failed extra request keeps primary rows and is not a search failure', () => {
+  const merged = planSearchMerge('Roti Dan Emas', {
+    primary: { ok: true, data: [rotiRaw] },
+    variant: { ok: false, data: [other] },
+    staging: { ok: true, denied: true, data: [rotiStaging] },
+  })
+  assert.equal(merged.failed, false)
+  assert.deepEqual(merged.rows.map(r => r.id), [42])
+})
+
+test('primary network failure does not surface other sources', () => {
+  const merged = planSearchMerge('Roti Dan Emas', {
+    primary: { ok: false, data: null },
+    variant: { ok: true, data: [rotiRaw] },
+    staging: { ok: true, data: [rotiStaging] },
+  })
+  assert.equal(merged.failed, true)
+  assert.deepEqual(merged.rows, [])
 })
 
 test('empty sources stay empty', () => {

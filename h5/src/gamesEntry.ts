@@ -1,7 +1,10 @@
-/** Home interactive-games card. Copy follows the list the games page actually loads. */
-export type GamesEntry = 'unknown' | 'live' | 'soon'
+/** Home interactive-games card. pending makes no availability claim; fail is not "coming soon". */
+export type GamesEntry = 'pending' | 'live' | 'soon' | 'fail'
 
-export function gamesEntryState(count: number | null): GamesEntry {
-  if (count == null || !Number.isFinite(count)) return 'unknown'
-  return count > 0 ? 'live' : 'soon'
+export function gamesEntryFromList(input: { code?: number; data?: { list?: unknown; total?: unknown } | null } | null): GamesEntry {
+  if (!input || Number(input.code) !== 1 || !input.data || !Array.isArray(input.data.list)) return 'fail'
+  const listed = input.data.list.length
+  const total = Number(input.data.total)
+  const n = Math.max(listed, Number.isFinite(total) ? total : 0)
+  return n > 0 ? 'live' : 'soon'
 }

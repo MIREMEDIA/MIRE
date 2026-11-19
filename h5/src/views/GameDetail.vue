@@ -60,7 +60,7 @@ import { toast } from '../components/toast'
 import { useUser } from '../stores/user'
 import { getUserInfo } from '../api'
 import { vipState } from '../vipState'
-import { getGame, unlockGame, mockPlayUrl, useGamesMock, type GameDetail } from '../api/games'
+import { getGame, unlockGame, type GameDetail } from '../api/games'
 
 const route = useRoute(); const router = useRouter(); const { t } = useI18n(); const user = useUser()
 const game = ref<GameDetail | null>(null)
@@ -104,10 +104,7 @@ const accessLabel = computed(() => {
 })
 const playSrc = computed(() => {
   const g = game.value; if (!g) return ''
-  if (g.playUrl) return g.playUrl
-  // mock only: placeholder when can_play but no URL yet
-  if (useGamesMock() && canPlay.value) return mockPlayUrl(g.id, g.title)
-  return ''
+  return g.playUrl || ''
 })
 const balTxt = computed(() => user.info ? Number(user.info.usable ?? 0).toLocaleString() : (user.token ? '…' : '0'))
 
