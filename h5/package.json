@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:fixture": "vite --config vite.fixture.config.ts",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "test:unit": "node --test tests/*.test.ts"
