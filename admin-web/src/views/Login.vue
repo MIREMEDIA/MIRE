@@ -50,4 +50,16 @@ async function submit() {
 .panel{flex:1;display:flex;align-items:center;justify-content:center;background:#fff}
 .card{width:360px}
 .card h2{font-size:26px;margin:0 0 6px}
+/* Phone: the row layout gives .brand padding:0 9% of the viewport and lets .card stay 360px, so the brand content width collapses to ~0 and the page scrolls sideways. */
+@media (max-width: 767px) {
+  .wrap{flex-direction:column;height:auto;min-height:100vh;min-height:100dvh}
+  .wrap,.brand,.panel,.card{box-sizing:border-box}
+  .brand{flex:none;width:100%;padding:28px 20px 18px;justify-content:flex-start}
+  .brand img{width:auto;max-width:min(220px,100%);height:auto}
+  .brand h1{font-size:22px;line-height:1.35;margin:14px 0 6px}
+  .brand p{font-size:13px;line-height:1.5}
+  .tag{margin-top:14px;max-width:100%;white-space:normal;letter-spacing:0}
+  .panel{flex:1 0 auto;width:100%;padding:8px 16px 32px;align-items:flex-start}
+  .card{width:100%;max-width:420px}
+}
 </style>
