@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101010"><title>MIRE DRAMA</title><link rel="icon" href="./favicon.png">
+<meta property="og:title" content="MIRE DRAMA - Short dramas"><meta property="og:image" content="./mire_drama_logo_on_dark.png">
+<script>window.MIRE_CONFIG={
+  /* B0: staging FastAdmin copy (relative => same origin, no CORS) */
+  apiBase:'/fa/index.php',
+  /* B1 #35: brand/title from /index/init system.name; #24: content languages from /index/lang_list */
+  brandFromInit:true,
+  serverLangs:true,
+  /* staging companion API (server-side first-recharge window, POST check-in, staging library). '' = off */
+  companionApi:'/h5api',
+  /* merge staging-library dramas (published via /publish/) into the home feed, shorts and player */
+  stagingLibrary:true,
+  /* B7 #3: check-in amounts and tasks now come only from the backend (/user_sign/index, /job/index) */
+  /* B7 #1: RSA public key for /ad/add|commit (pair of addons/dramas/library/data/private_key.pem). '' = ad unlock shows "not configured" */
+  adPublicKey:'',
+  /* B7 #3: legacy companion check-in (h5api) only when explicitly enabled */
+  companionCheckin:false,
+  firstRecharge:{ hours:24 }
+}</script>
+</head><body><div id="app"></div><script type="module" src="/src/main.ts"></script></body></html>

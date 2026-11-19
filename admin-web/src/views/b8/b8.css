@@ -1,0 +1,14 @@
+.b8{display:flex;flex-direction:column;gap:12px;min-width:0}
+.b8-f{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.b8-f > .n-input, .b8-f > .n-select{width:180px}
+.b8-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px 16px}
+.b8-grid label{display:flex;flex-direction:column;gap:4px;font-size:13px;color:#555}
+.b8-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.b8-code{font-family:ui-monospace,Menlo,monospace;font-size:12px;word-break:break-all}
+@media (max-width:767px){
+  .b8-f > .n-input, .b8-f > .n-select{width:100%}
+  .b8-f > .n-button{flex:1}
+  .b8-grid{grid-template-columns:1fr}
+  .b8 .n-button{min-height:40px}
+  .b8 .n-tabs .n-tabs-nav{overflow-x:auto}
+}

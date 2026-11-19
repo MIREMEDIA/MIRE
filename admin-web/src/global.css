@@ -1,0 +1,64 @@
+html,body,#app{margin:0;height:100%;}
+body{font-family:Poppins,"Noto Sans CJK SC","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:#F4F6FB;color:#1F1F1F;}
+.kpi-num{font-family:Poppins,sans-serif;font-weight:600;font-size:26px;color:#010101}
+.muted{color:#7A7A7A;font-size:12px}
+
+/* ---- Phone layout (<768px), same standard as MIRE Studio: drawer nav, card tables, fullscreen modals/forms, >=44px tap targets. Desktop untouched. ---- */
+@media (max-width: 767px) {
+  body{-webkit-text-size-adjust:100%}
+  /* tap targets */
+  .n-button{--n-height:44px!important;min-height:44px;min-width:44px}
+  .n-button.n-button--text-type{min-height:44px;padding:0 6px}
+  .n-input:not(.n-input--textarea){--n-height:44px!important}
+  .n-input,.n-base-selection,.n-input-number .n-input{min-height:44px}
+  .n-base-selection{--n-height:44px!important}
+  .n-input input,.n-input textarea{font-size:16px!important}   /* no iOS zoom-on-focus */
+  .n-menu .n-menu-item-content{min-height:44px;--n-item-height:44px!important}
+  .n-menu .n-menu-item{height:auto!important;min-height:44px}
+  .n-tabs .n-tabs-tab{min-height:44px;box-sizing:border-box}
+  .n-tabs .n-tabs-nav-scroll-content{overflow-x:auto}
+  .n-pagination .n-pagination-item{--n-item-size:44px!important;min-width:44px;min-height:44px}
+  .n-checkbox{min-height:44px;align-items:center}
+  .n-switch{min-height:44px;align-items:center}
+  .n-collapse-item__header{min-height:44px;align-items:center}
+  a.lnk{display:inline-flex;align-items:center;min-height:44px}
+  /* modals & drawers: fullscreen */
+  .n-modal-container .n-modal-body-wrapper .n-modal-scroll-content{padding:0!important;min-height:100%;display:flex}
+  .n-modal.n-card,.n-modal:not(.n-dialog){width:100vw!important;max-width:100vw!important;min-height:100vh;margin:0!important;border-radius:0!important;box-sizing:border-box}
+  /* confirm dialogs (preset dialog / useDialog): centred card over a translucent mask, page stays visible behind (CTO 2026-11-02) */
+  .n-modal-container .n-modal-body-wrapper .n-modal-scroll-content:has(> .n-dialog){align-items:center;justify-content:center;padding:16px!important;box-sizing:border-box}
+  .n-modal.n-dialog,.n-dialog.n-modal{width:calc(100vw - 32px)!important;max-width:420px!important;min-height:0!important;margin:auto!important;border-radius:12px!important;box-sizing:border-box}
+  .n-modal-mask{background-color:rgba(0,0,0,.45)!important}
+  .n-modal .n-card-header{position:sticky;top:0;background:#fff;z-index:2}
+  .n-modal .n-dialog__action{background:#fff;padding:10px 0 0;display:flex;gap:8px}
+  .n-modal .n-dialog__action .n-button{flex:1}
+  .n-drawer:not(.m-nav){width:100vw!important;max-width:100vw!important}
+  /* forms: stack labels on top, full-width controls */
+  .n-form-item.n-form-item--left-labelled{grid-template-areas:"label" "blank"!important;grid-template-columns:1fr!important}
+  .n-form-item.n-form-item--left-labelled .n-form-item-label{justify-content:flex-start;text-align:left;width:auto!important;padding-bottom:4px}
+  .n-form{max-width:none!important}
+  .n-input-number{width:100%}
+  /* cards / descriptions / filter bars */
+  .n-card > .n-card-header{flex-wrap:wrap;gap:4px}
+  .n-card > .n-card-header .n-card-header__extra{width:100%}
+  .n-card{--n-padding-left:12px!important;--n-padding-right:12px!important}
+  .n-space[style*="flex-wrap"] > div{max-width:100%}
+  .m-full,.m-filters > div,.m-filters .n-input,.m-filters .n-select,.m-filters .n-date-picker{width:100%!important}
+  .n-descriptions-table-wrapper{overflow-x:auto}
+  .n-image img{max-width:100%}
+  .n-input,.n-input-number,.n-select,.n-date-picker{max-width:100% !important}
+  .n-space > div{max-width:100%}
+}
+
+/* FE-M4 窄屏表格：任何宽度下表头/单元格不被挤成一字一行竖排，改为横向滚动 */
+.n-data-table .n-data-table-th{white-space:nowrap}
+.n-data-table .n-data-table-th,.n-data-table .n-data-table-td{min-width:72px}
+.n-descriptions .n-descriptions-table-header{white-space:nowrap}
+.tbl-x{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tbl-x table th,.tbl-x table td{white-space:nowrap;padding:4px 10px}
+@media (max-width: 767px){
+  table.n-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table.n-table th,table.n-table td{white-space:nowrap;min-width:64px}
+  .n-descriptions .n-descriptions-table-content{min-width:120px}
+}
+.b10-err{display:block;color:#d03050;font-size:12px;line-height:16px;margin-top:2px}

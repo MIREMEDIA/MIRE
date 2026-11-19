@@ -1,0 +1,6 @@
+// B16 strings: pay failure toasts
+export const b16Messages: Record<string, any> = {
+  en: { pay: { failed: 'Payment failed. Please try again or choose another payment method.', network: 'Network error. Please check your connection and try again.', noRedirect: 'Could not open the payment page. Please try again.', belowMin: 'This amount is below the minimum for this payment method ({min}). Please choose another plan or payment method.', m1payCurrency: 'M1Pay only supports MYR-priced plans ({cur}). Please choose another payment method.' } },
+  'zh-TW': { pay: { failed: '支付失敗，請重試或改用其他支付方式。', network: '網路異常，請檢查網路後重試。', noRedirect: '無法開啟支付頁面，請重試。', belowMin: '此金額低於該支付方式的最低金額（{min}），請選擇其他方案或支付方式。', m1payCurrency: 'M1Pay 僅支援馬幣（MYR）計價的方案（目前為 {cur}），請改用其他支付方式。' } },
+  ar: { pay: { failed: 'فشل الدفع. يُرجى المحاولة مرة أخرى أو اختيار طريقة دفع أخرى.', network: 'خطأ في الشبكة. يُرجى التحقق من الاتصال والمحاولة مرة أخرى.', noRedirect: 'تعذّر فتح صفحة الدفع. يُرجى المحاولة مرة أخرى.', belowMin: 'هذا المبلغ أقل من الحد الأدنى لطريقة الدفع هذه ({min}). يُرجى اختيار باقة أو طريقة دفع أخرى.', m1payCurrency: 'يدعم M1Pay الباقات المسعّرة بالرينغيت الماليزي (MYR) فقط ({cur}). يُرجى اختيار طريقة دفع أخرى.' } },
+}

@@ -1,0 +1,2936 @@
+[
+ {
+  "g": "工作台",
+  "s": null,
+  "id": "dash",
+  "t": "总览看板",
+  "old": "控制台 /dashboard + 剧场控制台 + 营销管理·控制台",
+  "st": "合并",
+  "k": "custom",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "工作台",
+  "s": null,
+  "id": "alerts",
+  "t": "待办与告警",
+  "old": "（无）",
+  "st": "新增",
+  "k": "table",
+  "cols": [
+   "级别",
+   "类型",
+   "描述",
+   "发现时间",
+   "操作"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "数据中心",
+  "s": null,
+  "id": "an_user",
+  "t": "用户分析",
+  "old": "数据分析 › 用户分析",
+  "st": "保留",
+  "k": "chart",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "线上该页数据为 0（未接入/未同步），新版改为埋点+日汇总",
+  "tabs": null
+ },
+ {
+  "g": "数据中心",
+  "s": null,
+  "id": "an_drama",
+  "t": "短剧分析",
+  "old": "数据分析 › 短剧分析",
+  "st": "保留",
+  "k": "chart",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "线上该页数据为 0（未接入/未同步），新版改为埋点+日汇总",
+  "tabs": null
+ },
+ {
+  "g": "数据中心",
+  "s": null,
+  "id": "an_mkt",
+  "t": "营销分析",
+  "old": "数据分析 › 营销分析",
+  "st": "保留",
+  "k": "chart",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "线上该页数据为 0（未接入/未同步），新版改为埋点+日汇总",
+  "tabs": null
+ },
+ {
+  "g": "数据中心",
+  "s": null,
+  "id": "an_pts",
+  "t": "积分分析",
+  "old": "数据分析 › 积分分析",
+  "st": "保留",
+  "k": "chart",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "线上该页数据为 0（未接入/未同步），新版改为埋点+日汇总",
+  "tabs": null
+ },
+ {
+  "g": "数据中心",
+  "s": null,
+  "id": "an_fund",
+  "t": "资金分析",
+  "old": "数据分析 › 资金分析",
+  "st": "保留",
+  "k": "chart",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "线上该页数据为 0（未接入/未同步），新版改为埋点+日汇总",
+  "tabs": null
+ },
+ {
+  "g": "数据中心",
+  "s": null,
+  "id": "an_ig",
+  "t": "互动影游分析",
+  "old": "（无）",
+  "st": "新增",
+  "k": "chart",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "内容",
+  "s": "短剧",
+  "id": "drama",
+  "t": "短剧列表",
+  "old": "剧场管理 › 短剧管理 › 短剧管理",
+  "st": "保留",
+  "k": "custom",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "内容",
+  "s": "短剧",
+  "id": "episodes",
+  "t": "剧集与媒体处理",
+  "old": "短剧管理 › 剧集/媒体处理/批量导入/目录导入/下载模板",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "集数",
+   "标题",
+   "时长",
+   "视频状态",
+   "是否付费",
+   "积分价",
+   "操作"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "审计未打开剧集详情页，字段为推断",
+  "tabs": null
+ },
+ {
+  "g": "内容",
+  "s": "短剧",
+  "id": "categories",
+  "t": "分类/年份/地区",
+  "old": "剧场·配置 › 分类管理",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "名称",
+   "语种",
+   "类型",
+   "排序",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": [
+   "视频分类",
+   "年份",
+   "地区"
+  ]
+ },
+ {
+  "g": "内容",
+  "s": "短剧",
+  "id": "rewards",
+  "t": "打赏记录",
+  "old": "短剧管理 › 打赏记录",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "用户",
+   "短剧",
+   "积分",
+   "时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "线上 14 条；上下限见“打赏配置”",
+  "tabs": null
+ },
+ {
+  "g": "内容",
+  "s": "短剧",
+  "id": "tip_cfg",
+  "t": "打赏配置",
+  "old": "（无，原硬编码 1–5）",
+  "st": "新增",
+  "k": "form",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "B9",
+  "tabs": null
+ },
+ {
+  "g": "内容",
+  "s": "短剧",
+  "id": "comments",
+  "t": "短剧评论",
+  "old": "短剧管理 › 短剧评论",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "用户",
+   "短剧",
+   "内容",
+   "点赞",
+   "状态",
+   "操作"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "内容",
+  "s": "短剧",
+  "id": "playlists",
+  "t": "剧单管理",
+  "old": "短剧管理 › 剧单管理",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "剧单名称",
+   "语种",
+   "短剧数",
+   "排序",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "内容",
+  "s": "互动影游",
+  "id": "ig",
+  "t": "分支编辑器",
+  "old": "（无）",
+  "st": "新增",
+  "k": "custom",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "内容",
+  "s": "互动影游",
+  "id": "ig_list",
+  "t": "作品列表",
+  "old": "（无）",
+  "st": "新增",
+  "k": "table",
+  "cols": [
+   "作品",
+   "语种",
+   "章节",
+   "节点",
+   "结局",
+   "完成率",
+   "收入",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "示例数据",
+  "tabs": null
+ },
+ {
+  "g": "内容",
+  "s": "互动影游",
+  "id": "ig_assets",
+  "t": "视频素材库",
+  "old": "（无）",
+  "st": "新增",
+  "k": "table",
+  "cols": [
+   "文件",
+   "时长",
+   "清晰度",
+   "字幕",
+   "转码",
+   "引用节点"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "内容",
+  "s": "互动影游",
+  "id": "ig_endings",
+  "t": "结局与成就",
+  "old": "（无）",
+  "st": "新增",
+  "k": "table",
+  "cols": [
+   "名称",
+   "类型",
+   "稀有度",
+   "触发规则",
+   "奖励积分",
+   "达成人数"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": [
+   "结局",
+   "成就"
+  ]
+ },
+ {
+  "g": "内容",
+  "s": "互动影游",
+  "id": "ig_saves",
+  "t": "解锁与存档记录",
+  "old": "（无）",
+  "st": "新增",
+  "k": "table",
+  "cols": [
+   "用户",
+   "作品",
+   "类型",
+   "目标",
+   "消耗金币",
+   "时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "内容",
+  "s": "小说",
+  "id": "novels",
+  "t": "小说",
+  "old": "书城管理 › 小说",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "书名",
+   "写手",
+   "分类",
+   "章节",
+   "字数",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "内容",
+  "s": "小说",
+  "id": "novel_cats",
+  "t": "小说分类",
+  "old": "书城管理 › 分类",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "名称",
+   "语种",
+   "排序"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "内容",
+  "s": "小说",
+  "id": "writers",
+  "t": "写手",
+  "old": "书城管理 › 写手",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "笔名",
+   "账号",
+   "作品数",
+   "分润比例",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "内容",
+  "s": "小说",
+  "id": "novel_rewards",
+  "t": "小说打赏",
+  "old": "书城管理 › 打赏",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "用户",
+   "小说",
+   "积分",
+   "时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "内容",
+  "s": "运营位",
+  "id": "blocks",
+  "t": "首页区块/Banner",
+  "old": "剧场·配置 › 区块管理",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "标题",
+   "语种",
+   "类型",
+   "链接短剧",
+   "排序",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "线上 5 条英文区块",
+  "tabs": null
+ },
+ {
+  "g": "内容",
+  "s": "运营位",
+  "id": "notices",
+  "t": "公告通知",
+  "old": "剧场·配置 › 公告通知",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "标题",
+   "语种",
+   "发布时间",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "内容",
+  "s": "运营位",
+  "id": "agreements",
+  "t": "协议与文案",
+  "old": "剧场·配置 › 协议配置",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "标题",
+   "语种",
+   "类型",
+   "更新时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "线上 64 篇（含签到说明、邮件模板）",
+  "tabs": [
+   "中文简体",
+   "English",
+   "繁體中文",
+   "ไทย",
+   "Bahasa Melayu",
+   "Español",
+   "العربية",
+   "Tiếng Việt"
+  ]
+ },
+ {
+  "g": "创作中心 Creator Center",
+  "s": "内容审核",
+  "id": "cc_review",
+  "t": "作品审核",
+  "old": "（无）· MIRE Studio 创作者平台",
+  "st": "新增",
+  "k": "cc",
+  "perm": "cc.review",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "创作中心 Creator Center",
+  "s": "内容审核",
+  "id": "cc_comp",
+  "t": "合规与授权",
+  "old": "（无）· MIRE Studio 创作者平台",
+  "st": "新增",
+  "k": "cc",
+  "perm": "cc.compliance",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "创作中心 Creator Center",
+  "s": "创作者",
+  "id": "cc_creators",
+  "t": "创作者管理",
+  "old": "（无）· MIRE Studio 创作者平台",
+  "st": "新增",
+  "k": "cc",
+  "perm": "cc.creator",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "创作中心 Creator Center",
+  "s": "创作者",
+  "id": "cc_invites",
+  "t": "邀请码",
+  "old": "（无）· MIRE Studio 创作者平台",
+  "st": "新增",
+  "k": "cc",
+  "perm": "cc.creator",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "创作中心 Creator Center",
+  "s": "收益与积分",
+  "id": "cc_revenue",
+  "t": "收益结算",
+  "old": "（无）· MIRE Studio 创作者平台",
+  "st": "新增",
+  "k": "cc",
+  "perm": "cc.finance",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "创作中心 Creator Center",
+  "s": "收益与积分",
+  "id": "cc_withdraw",
+  "t": "提现审核",
+  "old": "（无）· MIRE Studio 创作者平台",
+  "st": "新增",
+  "k": "cc",
+  "perm": "cc.finance",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "创作中心 Creator Center",
+  "s": "收益与积分",
+  "id": "cc_spark",
+  "t": "Spark 积分",
+  "old": "（无）· MIRE Studio 创作者平台",
+  "st": "新增",
+  "k": "cc",
+  "perm": "cc.credits",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "创作中心 Creator Center",
+  "s": "AI 与配置",
+  "id": "cc_cost",
+  "t": "AI 成本监控",
+  "old": "（无）· MIRE Studio 创作者平台",
+  "st": "新增",
+  "k": "cc",
+  "perm": "cc.cost",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "创作中心 Creator Center",
+  "s": "AI 与配置",
+  "id": "cc_config",
+  "t": "模型与模板",
+  "old": "（无）· MIRE Studio 创作者平台",
+  "st": "新增",
+  "k": "cc",
+  "perm": "cc.config",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "创作中心 Creator Center",
+  "s": "AI 与配置",
+  "id": "cc_perm",
+  "t": "创作中心权限",
+  "old": "（无）· MIRE Studio 创作者平台",
+  "st": "新增",
+  "k": "cc",
+  "perm": "cc.perm",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "用户",
+  "s": null,
+  "id": "members",
+  "t": "会员列表",
+  "old": "剧场·会员管理 › 会员管理",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "昵称",
+   "邮箱/手机",
+   "语种",
+   "分组",
+   "VIP到期",
+   "积分",
+   "来源渠道",
+   "注册时间",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "ID/邮箱",
+   "语种",
+   "分组",
+   "来源",
+   "注册时间"
+  ],
+  "note": "线上列表显示 0 行但控制台 585,793 会员 → 需修复",
+  "tabs": [
+   "全部",
+   "会员",
+   "游客"
+  ]
+ },
+ {
+  "g": "用户",
+  "s": null,
+  "id": "groups",
+  "t": "会员分组",
+  "old": "剧场·会员管理 › 会员分组",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "名称",
+   "权益",
+   "人数",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "两个重复分组建议合并",
+  "tabs": null
+ },
+ {
+  "g": "用户",
+  "s": null,
+  "id": "wallet",
+  "t": "钱包与积分流水",
+  "old": "剧场·会员管理 › 钱包日志",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "用户",
+   "类型",
+   "变动",
+   "余额",
+   "备注",
+   "时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "用户",
+  "s": null,
+  "id": "withdraw",
+  "t": "提现审核",
+  "old": "剧场·会员管理 › 用户提现",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "用户",
+   "金额(积分)",
+   "手续费",
+   "收款类型",
+   "账户",
+   "状态",
+   "申请时间",
+   "操作"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": [
+   "审核中",
+   "处理中",
+   "已处理",
+   "已拒绝"
+  ]
+ },
+ {
+  "g": "用户",
+  "s": null,
+  "id": "video_log",
+  "t": "收藏与观看记录",
+  "st": "新增"
+ },
+ {
+  "g": "交易与支付",
+  "s": "订单中心",
+  "id": "o_vip",
+  "t": "VIP 订单",
+  "old": "营销 › VIP管理 › VIP订单",
+  "st": "合并",
+  "k": "table",
+  "cols": [
+   "订单号",
+   "用户",
+   "语种",
+   "套餐/商品",
+   "金额(USD)",
+   "支付方式",
+   "支付状态",
+   "投手/来源",
+   "剧目ID",
+   "创建时间"
+  ],
+  "fields": null,
+  "filters": [
+   "订单号",
+   "支付状态",
+   "支付方式",
+   "语种",
+   "投手",
+   "时间"
+  ],
+  "note": "今日 118 单/41 已付/≈$1,089.9；投手/来源列线上为空",
+  "tabs": null
+ },
+ {
+  "g": "交易与支付",
+  "s": "订单中心",
+  "id": "o_pts",
+  "t": "积分订单",
+  "old": "营销 › 剧场积分 › 积分订单",
+  "st": "合并",
+  "k": "table",
+  "cols": [
+   "订单号",
+   "用户",
+   "语种",
+   "套餐/商品",
+   "金额(USD)",
+   "支付方式",
+   "支付状态",
+   "投手/来源",
+   "剧目ID",
+   "创建时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "线上 75 单 0 支付",
+  "tabs": null
+ },
+ {
+  "g": "交易与支付",
+  "s": "订单中心",
+  "id": "o_drama",
+  "t": "短剧解锁订单",
+  "old": "短剧管理 › 短剧订单",
+  "st": "合并",
+  "k": "table",
+  "cols": [
+   "订单号",
+   "用户",
+   "短剧",
+   "集数",
+   "积分",
+   "时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "交易与支付",
+  "s": "订单中心",
+  "id": "o_res",
+  "t": "分销订单",
+  "old": "营销 › 分销管理 › 分销订单",
+  "st": "合并",
+  "k": "table",
+  "cols": [
+   "订单号",
+   "用户",
+   "语种",
+   "套餐/商品",
+   "金额(USD)",
+   "支付方式",
+   "支付状态",
+   "投手/来源",
+   "剧目ID",
+   "创建时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "线上 6 单 0 支付",
+  "tabs": null
+ },
+ {
+  "g": "交易与支付",
+  "s": "订单中心",
+  "id": "o_novel",
+  "t": "小说订单",
+  "old": "书城管理 › 小说订单",
+  "st": "合并",
+  "k": "table",
+  "cols": [
+   "订单号",
+   "用户",
+   "小说",
+   "章节",
+   "积分",
+   "时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "交易与支付",
+  "s": "订单中心",
+  "id": "o_ig",
+  "t": "影游解锁订单",
+  "old": "（无）",
+  "st": "新增",
+  "k": "table",
+  "cols": [
+   "订单号",
+   "用户",
+   "作品",
+   "解锁项",
+   "金币",
+   "时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "交易与支付",
+  "s": "商品与定价",
+  "id": "price",
+  "t": "VIP 套餐",
+  "old": "营销 › VIP管理 › VIP套餐",
+  "st": "保留",
+  "k": "custom",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "交易与支付",
+  "s": "商品与定价",
+  "id": "pkg_pts",
+  "t": "积分套餐",
+  "old": "营销 › 剧场积分 › 积分套餐",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "套餐",
+   "语种",
+   "积分(基础+赠送)",
+   "价格",
+   "划线价",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "线上 21 条（7 语种×3）",
+  "tabs": [
+   "中文简体",
+   "English",
+   "繁體中文",
+   "ไทย",
+   "Bahasa Melayu",
+   "Español",
+   "العربية",
+   "Tiếng Việt"
+  ]
+ },
+ {
+  "g": "交易与支付",
+  "s": "商品与定价",
+  "id": "pkg_res",
+  "t": "分销套餐",
+  "old": "营销 › 分销管理 › 分销套餐",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "套餐",
+   "语种",
+   "价格",
+   "划线价",
+   "直推比例",
+   "间推比例",
+   "有效期"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": [
+   "中文简体",
+   "English",
+   "繁體中文",
+   "ไทย",
+   "Bahasa Melayu",
+   "Español",
+   "العربية",
+   "Tiếng Việt"
+  ]
+ },
+ {
+  "g": "交易与支付",
+  "s": "支付渠道",
+  "id": "pay_stripe",
+  "t": "Stripe",
+  "old": "剧场·配置 › 系统配置 › 支付 › Stripe",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "启用",
+    "switch",
+    "开"
+   ],
+   [
+    "环境",
+    "select",
+    "生产环境"
+   ],
+   [
+    "终端",
+    "text",
+    "H5 + App"
+   ],
+   [
+    "Publishable Key",
+    "text",
+    "pk_live_51N••••••••Qx7a"
+   ],
+   [
+    "Secret Key",
+    "secret",
+    "sk_live_••••••••3f9a"
+   ],
+   [
+    "Webhook Secret",
+    "secret",
+    "whsec_••••••c21e"
+   ],
+   [
+    "回调地址",
+    "text",
+    "/addons/dramas/pay/notify_stripe"
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "交易与支付",
+  "s": "支付渠道",
+  "id": "pay_m1pay",
+  "t": "M1pay",
+  "old": "剧场·配置 › 系统配置 › 支付 › M1pay",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "启用",
+    "switch",
+    "开"
+   ],
+   [
+    "环境",
+    "select",
+    "生产环境"
+   ],
+   [
+    "终端",
+    "text",
+    "H5 + App"
+   ],
+   [
+    "Client ID",
+    "text",
+    "m1_••••8842"
+   ],
+   [
+    "Client Secret",
+    "secret",
+    "••••••••a90d"
+   ],
+   [
+    "私钥证书",
+    "file",
+    "private.pem"
+   ],
+   [
+    "公钥证书",
+    "file",
+    "public.pem"
+   ],
+   [
+    "回调地址",
+    "text",
+    "/addons/dramas/pay/notify_m1pay"
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "交易与支付",
+  "s": "支付渠道",
+  "id": "pay_paypal",
+  "t": "PayPal",
+  "old": "剧场·配置 › 系统配置 › 支付 › PayPal",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "启用",
+    "switch",
+    "关"
+   ],
+   [
+    "环境",
+    "select",
+    "生产环境"
+   ],
+   [
+    "终端",
+    "text",
+    "App"
+   ],
+   [
+    "Client ID",
+    "text",
+    ""
+   ],
+   [
+    "Secret",
+    "secret",
+    ""
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "交易与支付",
+  "s": "支付渠道",
+  "id": "pay_apple",
+  "t": "Apple",
+  "old": "剧场·配置 › 系统配置 › 支付 › Apple",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "启用",
+    "switch",
+    "关"
+   ],
+   [
+    "环境",
+    "select",
+    "生产环境"
+   ],
+   [
+    "终端",
+    "text",
+    "App"
+   ],
+   [
+    "Bundle ID",
+    "text",
+    ""
+   ],
+   [
+    "Shared Secret",
+    "secret",
+    ""
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "交易与支付",
+  "s": "支付渠道",
+  "id": "pay_antom",
+  "t": "Antom",
+  "old": "剧场·配置 › 系统配置 › 支付 › Antom",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "启用",
+    "switch",
+    "关"
+   ],
+   [
+    "环境",
+    "select",
+    "生产环境"
+   ],
+   [
+    "终端",
+    "text",
+    "—"
+   ],
+   [
+    "Client ID",
+    "text",
+    ""
+   ],
+   [
+    "私钥",
+    "secret",
+    ""
+   ],
+   [
+    "支付方式",
+    "text",
+    "Alipay / Card / DANA / GCash …"
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "交易与支付",
+  "s": "支付渠道",
+  "id": "pay_waffo",
+  "t": "Waffo",
+  "old": "剧场·配置 › 系统配置 › 支付 › Waffo",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "启用",
+    "switch",
+    "关"
+   ],
+   [
+    "环境",
+    "select",
+    "生产环境"
+   ],
+   [
+    "终端",
+    "text",
+    "—"
+   ],
+   [
+    "Merchant ID",
+    "text",
+    ""
+   ],
+   [
+    "API Key",
+    "secret",
+    ""
+   ],
+   [
+    "支付方式",
+    "text",
+    "DANA / OVO / QRIS / ShopeePay"
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "交易与支付",
+  "s": "支付渠道",
+  "id": "pay_airwallex",
+  "t": "Airwallex",
+  "old": "剧场·配置 › 系统配置 › 支付 › Airwallex",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "启用",
+    "switch",
+    "关"
+   ],
+   [
+    "环境",
+    "select",
+    "生产环境"
+   ],
+   [
+    "终端",
+    "text",
+    "—"
+   ],
+   [
+    "Client ID",
+    "text",
+    ""
+   ],
+   [
+    "API Key",
+    "secret",
+    ""
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "交易与支付",
+  "s": null,
+  "id": "wd_cfg",
+  "t": "提现配置",
+  "old": "剧场·配置 › 系统配置 › 提现",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "提现方式",
+    "text",
+    "Bank"
+   ],
+   [
+    "手续费",
+    "text",
+    "10%"
+   ],
+   [
+    "最小提现(积分)",
+    "text",
+    "100"
+   ],
+   [
+    "最大提现(积分)",
+    "text",
+    "10,000,000"
+   ],
+   [
+    "每日次数上限",
+    "text",
+    "0 = 不限"
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "交易与支付",
+  "s": null,
+  "id": "wd_currency",
+  "t": "提现币种与汇率",
+  "old": "语种管理 › 货币/汇率",
+  "st": "新增",
+  "k": "form",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "B9",
+  "tabs": null
+ },
+ {
+  "g": "营销增长",
+  "s": "福利",
+  "id": "signin",
+  "t": "签到管理",
+  "old": "福利管理 › 签到管理",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "签到模式",
+    "select",
+    "每日/递增/连续"
+   ],
+   [
+    "补签",
+    "switch",
+    "关"
+   ],
+   [
+    "每日奖励积分",
+    "text",
+    "—"
+   ],
+   [
+    "签到说明",
+    "rich",
+    "多语言富文本"
+   ]
+  ],
+  "filters": null,
+  "note": "审计仅见配置项名称，具体值未记录",
+  "tabs": null
+ },
+ {
+  "g": "营销增长",
+  "s": "福利",
+  "id": "welfare",
+  "t": "福利活动",
+  "old": "福利管理 › 福利活动",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "看广告得积分",
+    "switch",
+    "关"
+   ],
+   [
+    "邀请注册奖励",
+    "switch",
+    "关"
+   ],
+   [
+    "每日上限",
+    "text",
+    "—"
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "营销增长",
+  "s": "福利",
+  "id": "retain",
+  "t": "挽留配置",
+  "old": "福利管理 › 挽留配置",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "挽留套餐弹窗",
+    "switch",
+    "关"
+   ],
+   [
+    "广告解锁",
+    "switch",
+    "关"
+   ],
+   [
+    "挽留套餐",
+    "select",
+    "—"
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "营销增长",
+  "s": "福利",
+  "id": "tasks",
+  "t": "任务列表",
+  "old": "福利管理 › 任务管理 › 任务列表",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "任务名",
+   "类型",
+   "奖励积分",
+   "次数",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "营销增长",
+  "s": "福利",
+  "id": "task_log",
+  "t": "任务记录",
+  "old": "福利管理 › 任务管理 › 任务记录",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "用户",
+   "任务",
+   "奖励",
+   "时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "营销增长",
+  "s": "积分商城",
+  "id": "mall_goods",
+  "t": "商品管理",
+  "old": "福利管理 › 积分商城 › 商品管理",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "商品",
+   "所需积分",
+   "库存",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "营销增长",
+  "s": "积分商城",
+  "id": "mall_orders",
+  "t": "兑换订单",
+  "old": "福利管理 › 积分商城 › 订单记录",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "订单号",
+   "用户",
+   "商品",
+   "积分",
+   "状态",
+   "时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "营销增长",
+  "s": "分销与卡密",
+  "id": "res_log",
+  "t": "分销记录",
+  "old": "营销 › 分销管理 › 分销记录",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "分销商",
+   "下级用户",
+   "订单",
+   "佣金",
+   "层级",
+   "时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "营销增长",
+  "s": "分销与卡密",
+  "id": "cards",
+  "t": "卡密管理",
+  "old": "营销 › 卡密管理",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "卡号",
+   "类型",
+   "面值/套餐",
+   "批次",
+   "状态",
+   "使用者",
+   "使用时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": [
+   "积分",
+   "分销",
+   "VIP"
+  ]
+ },
+ {
+  "g": "营销增长",
+  "s": "分销与卡密",
+  "id": "switches",
+  "t": "功能开关",
+  "old": "剧场·配置 › 系统配置 › 开关",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "分销",
+    "switch",
+    "关"
+   ],
+   [
+    "卡密",
+    "switch",
+    "关"
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "营销增长",
+  "s": "版权分润",
+  "id": "cp_owner",
+  "t": "版权方",
+  "old": "营销 › 版权分润 › 版权方",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "名称",
+   "联系人",
+   "分润比例",
+   "关联短剧",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "营销增长",
+  "s": "版权分润",
+  "id": "cp_log",
+  "t": "分润记录",
+  "old": "营销 › 版权分润 › 分润记录 + 书城 › 分润记录",
+  "st": "合并",
+  "k": "table",
+  "cols": [
+   "ID",
+   "对象(版权方/写手)",
+   "来源",
+   "订单金额",
+   "分润",
+   "时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": [
+   "短剧版权",
+   "小说写手"
+  ]
+ },
+ {
+  "g": "营销增长",
+  "s": "版权分润",
+  "id": "cp_wd",
+  "t": "分润提现",
+  "old": "营销 › 版权分润 › 分润提现 + 书城 › 分润提现",
+  "st": "合并",
+  "k": "table",
+  "cols": [
+   "ID",
+   "对象",
+   "金额",
+   "账户",
+   "状态",
+   "时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": [
+   "短剧版权",
+   "小说写手"
+  ]
+ },
+ {
+  "g": "投放归因",
+  "s": null,
+  "id": "pitchers",
+  "t": "投手管理",
+  "old": "投手管理 › 投手管理",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "用户名",
+   "昵称",
+   "投手标识",
+   "投放链接",
+   "组别",
+   "邮箱",
+   "手机",
+   "状态",
+   "最后登录"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "投放归因",
+  "s": null,
+  "id": "p_vip",
+  "t": "投手 VIP 套餐",
+  "old": "投手管理 › VIP套餐",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "投手",
+   "套餐",
+   "语种",
+   "价格",
+   "划线价",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": [
+   "中文简体",
+   "English",
+   "繁體中文",
+   "ไทย",
+   "Bahasa Melayu",
+   "Español",
+   "العربية",
+   "Tiếng Việt"
+  ]
+ },
+ {
+  "g": "投放归因",
+  "s": null,
+  "id": "p_pts",
+  "t": "投手积分套餐",
+  "old": "投手管理 › 积分套餐",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "投手",
+   "套餐",
+   "语种",
+   "积分",
+   "价格",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": [
+   "中文简体",
+   "English",
+   "繁體中文",
+   "ไทย",
+   "Bahasa Melayu",
+   "Español",
+   "العربية",
+   "Tiếng Việt"
+  ]
+ },
+ {
+  "g": "投放归因",
+  "s": null,
+  "id": "cps",
+  "t": "CPS 配置",
+  "old": "剧场·配置 › 系统配置 › CPS",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "CPS",
+    "switch",
+    "关"
+   ],
+   [
+    "结算比例",
+    "text",
+    "—"
+   ]
+  ],
+  "filters": null,
+  "note": "审计仅见开关",
+  "tabs": null
+ },
+ {
+  "g": "投放归因",
+  "s": "像素与回传",
+  "id": "px_fb",
+  "t": "Facebook",
+  "old": "剧场·配置 › 系统配置 › 平台 › Facebook",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "App ID",
+    "text",
+    ""
+   ],
+   [
+    "App Secret",
+    "secret",
+    ""
+   ],
+   [
+    "Pixel ID",
+    "text",
+    "（新增）"
+   ],
+   [
+    "CAPI Token",
+    "secret",
+    "（新增）"
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "投放归因",
+  "s": "像素与回传",
+  "id": "px_gg",
+  "t": "Google",
+  "old": "剧场·配置 › 系统配置 › 平台 › Google",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "Client ID",
+    "text",
+    ""
+   ],
+   [
+    "Client Secret",
+    "secret",
+    ""
+   ],
+   [
+    "Ads 转化 ID",
+    "text",
+    "（新增）"
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "投放归因",
+  "s": "像素与回传",
+  "id": "px_x",
+  "t": "X",
+  "old": "剧场·配置 › 系统配置 › 平台 › X",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "API Key",
+    "text",
+    ""
+   ],
+   [
+    "API Secret",
+    "secret",
+    ""
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "投放归因",
+  "s": "像素与回传",
+  "id": "px_gtm",
+  "t": "Google Tag Manager",
+  "old": "剧场·配置 › 系统配置 › 平台 › GTM",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "容器 ID",
+    "text",
+    "GTM-"
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "投放归因",
+  "s": "像素与回传",
+  "id": "px_tt",
+  "t": "TikTok",
+  "old": "（无）",
+  "st": "新增",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "Pixel ID",
+    "text",
+    ""
+   ],
+   [
+    "Events API Token",
+    "secret",
+    ""
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "投放归因",
+  "s": "广告变现",
+  "id": "ads",
+  "t": "广告列表",
+  "old": "广告管理 › 广告列表",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "广告位",
+   "平台",
+   "单元ID",
+   "奖励",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "投放归因",
+  "s": "广告变现",
+  "id": "ad_log",
+  "t": "广告记录",
+  "old": "广告管理 › 广告记录",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "用户",
+   "广告位",
+   "奖励",
+   "时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "投放归因",
+  "s": null,
+  "id": "roi",
+  "t": "ROI 报表",
+  "old": "（无）",
+  "st": "新增",
+  "k": "table",
+  "cols": [
+   "渠道/投手",
+   "消耗",
+   "注册",
+   "付费",
+   "收入",
+   "ROI"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "示例数据",
+  "tabs": null
+ },
+ {
+  "g": "多语言",
+  "s": null,
+  "id": "langs",
+  "t": "语种管理",
+  "old": "（无）",
+  "st": "新增",
+  "k": "table",
+  "cols": [
+   "代码",
+   "名称",
+   "原生名",
+   "RTL",
+   "检测结果",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "多语言",
+  "s": null,
+  "id": "lang_admin",
+  "t": "后台语言包",
+  "old": "语言包管理 › 后台语言包",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "键",
+   "中文简体",
+   "English",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": [
+   "中文简体",
+   "English",
+   "繁體中文",
+   "ไทย",
+   "Bahasa Melayu",
+   "Español",
+   "العربية",
+   "Tiếng Việt"
+  ]
+ },
+ {
+  "g": "多语言",
+  "s": null,
+  "id": "lang_drama",
+  "t": "前台/短剧语言包",
+  "old": "语言包管理 › 短剧语言包",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "键",
+   "中文简体",
+   "English",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": [
+   "中文简体",
+   "English",
+   "繁體中文",
+   "ไทย",
+   "Bahasa Melayu",
+   "Español",
+   "العربية",
+   "Tiếng Việt"
+  ]
+ },
+ {
+  "g": "多语言",
+  "s": null,
+  "id": "translate",
+  "t": "机器翻译配置",
+  "old": "语言包管理 › 翻译配置 + 常规·系统配置(百度翻译)",
+  "st": "合并",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "服务商",
+    "select",
+    "百度翻译"
+   ],
+   [
+    "APPID",
+    "text",
+    "2025••••41"
+   ],
+   [
+    "密钥",
+    "secret",
+    "••••••••"
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "站点配置",
+  "id": "site",
+  "t": "站点信息",
+  "old": "常规 › 系统配置(基础/字典) + 剧场·系统配置 › 系统信息",
+  "st": "合并",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "站点名称(各语种)",
+    "text",
+    "MIRE DRAMA"
+   ],
+   [
+    "H5 域名",
+    "text",
+    "https://video.superchill.vip/h5/"
+   ],
+   [
+    "默认语言",
+    "select",
+    "English"
+   ],
+   [
+    "时区",
+    "select",
+    "Asia/Shanghai → 建议 UTC"
+   ],
+   [
+    "Logo",
+    "file",
+    "mire_drama_logo.png"
+   ],
+   [
+    "版权",
+    "text",
+    "© MIRE DRAMA"
+   ],
+   [
+    "后台固定页",
+    "text",
+    "dashboard"
+   ],
+   [
+    "版本",
+    "text",
+    "4.6.2"
+   ]
+  ],
+  "filters": null,
+  "note": "常规配置「示例」分组删除",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "站点配置",
+  "id": "member_cfg",
+  "t": "会员配置",
+  "old": "常规 › 系统配置(会员) + 剧场 › 会员配置",
+  "st": "合并",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "默认昵称",
+    "text",
+    "MIRE DRAMA 用户"
+   ],
+   [
+    "默认分组",
+    "select",
+    "默认分组"
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "站点配置",
+  "id": "share",
+  "t": "分享配置",
+  "old": "剧场·系统配置 › 分享",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "分享海报(各语种)",
+    "file",
+    "poster_en.png"
+   ],
+   [
+    "分享标题",
+    "text",
+    ""
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "第三方集成",
+  "id": "sms",
+  "t": "短信",
+  "old": "剧场·系统配置 › 短信",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "服务商",
+    "select",
+    "阿里云短信"
+   ],
+   [
+    "AccessKey",
+    "text",
+    ""
+   ],
+   [
+    "Secret",
+    "secret",
+    ""
+   ],
+   [
+    "签名",
+    "text",
+    ""
+   ],
+   [
+    "模板 en",
+    "text",
+    "Your verification code is {code}…"
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "第三方集成",
+  "id": "sms_log",
+  "t": "验证码记录",
+  "st": "新增"
+ },
+ {
+  "g": "系统与安全",
+  "s": "第三方集成",
+  "id": "smtp",
+  "t": "邮件 SMTP",
+  "old": "常规 › 系统配置(邮件) + 剧场 › 邮件",
+  "st": "合并",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "SMTP 服务器",
+    "text",
+    "smtp.163.com"
+   ],
+   [
+    "端口",
+    "text",
+    "465"
+   ],
+   [
+    "加密",
+    "select",
+    "SSL"
+   ],
+   [
+    "发件人",
+    "text",
+    "m***@163.com"
+   ],
+   [
+    "用户名",
+    "text",
+    "m***@163.com"
+   ],
+   [
+    "密码",
+    "secret",
+    "••••••••"
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "第三方集成",
+  "id": "oss",
+  "t": "云存储 OSS",
+  "old": "剧场·系统配置 › 云存储",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "Bucket",
+    "text",
+    "chill-tv"
+   ],
+   [
+    "Endpoint",
+    "text",
+    "oss-ap-southeast-1"
+   ],
+   [
+    "AccessKey ID",
+    "text",
+    "LTAI5t••••Wk2"
+   ],
+   [
+    "AccessKey Secret",
+    "secret",
+    "••••••••"
+   ],
+   [
+    "上传模式",
+    "select",
+    "服务器中转 → 建议 STS 直传"
+   ],
+   [
+    "最大文件",
+    "text",
+    "1024M"
+   ],
+   [
+    "允许后缀",
+    "text",
+    "jpg,png,mp4,xls…（建议移除 apk/ipa）"
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "第三方集成",
+  "id": "vod",
+  "t": "媒体处理(腾讯云 VOD)",
+  "old": "剧场·系统配置 › 媒体处理",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "SecretId",
+    "text",
+    ""
+   ],
+   [
+    "SecretKey",
+    "secret",
+    ""
+   ],
+   [
+    "输出目录",
+    "text",
+    "/output/"
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "第三方集成",
+  "id": "mt_api",
+  "t": "短剧内容接口",
+  "old": "剧场·系统配置 › 短剧接口",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "App ID",
+    "text",
+    "••••"
+   ],
+   [
+    "App Secret",
+    "secret",
+    "••••••••"
+   ]
+  ],
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "安全",
+  "id": "set",
+  "t": "密钥保管与轮换",
+  "old": "（无，原为各配置页明文）",
+  "st": "新增",
+  "k": "custom",
+  "cols": null,
+  "fields": null,
+  "filters": null,
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "安全",
+  "id": "admins",
+  "t": "管理员",
+  "old": "权限管理 › 管理员管理",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "用户名",
+   "昵称",
+   "角色组",
+   "邮箱",
+   "2FA",
+   "最后登录",
+   "状态",
+   "操作"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "线上 4 个管理员；admin 弱口令需修改",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "安全",
+  "id": "roles",
+  "t": "角色组",
+  "old": "权限管理 › 角色组",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "父级",
+   "名称",
+   "权限数",
+   "状态"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "安全",
+  "id": "rules",
+  "t": "菜单规则",
+  "old": "权限管理 › 菜单规则",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "标题",
+   "规则",
+   "图标",
+   "是否菜单",
+   "排序"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "仅超管可见；旧隐藏规则「会员」删除",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "安全",
+  "id": "adminlog",
+  "t": "操作日志",
+  "old": "权限管理 › 管理员日志",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "管理员",
+   "标题",
+   "URL",
+   "IP",
+   "UA",
+   "时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "线上 1,080 条",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "安全",
+  "id": "attach",
+  "t": "附件管理",
+  "old": "常规 › 附件管理",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "预览",
+   "文件名",
+   "类型",
+   "大小",
+   "存储",
+   "上传时间",
+   "操作"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "线上 57 个文件 69MB",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "插件",
+  "id": "addons",
+  "t": "插件管理",
+  "old": "插件管理",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "插件",
+   "版本",
+   "作者",
+   "说明",
+   "状态",
+   "操作"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "插件",
+  "id": "ad_cmd",
+  "t": "配置 · 在线命令",
+  "old": "插件管理 › 在线命令 › 配置",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "允许在生产使用",
+    "switch",
+    "关（建议）"
+   ]
+  ],
+  "filters": null,
+  "note": "审计未打开插件配置弹窗，字段为推断",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "插件",
+  "id": "ad_drama",
+  "t": "配置 · 短剧旗舰版",
+  "old": "插件管理 › 短剧旗舰版 › 配置",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "授权码",
+    "secret",
+    "••••••••"
+   ],
+   [
+    "接口域名",
+    "text",
+    ""
+   ]
+  ],
+  "filters": null,
+  "note": "审计未打开，字段为推断",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "插件",
+  "id": "ad_pay",
+  "t": "配置 · 微信支付宝整合",
+  "old": "插件管理 › 微信支付宝整合 › 配置",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "微信",
+    "switch",
+    "关"
+   ],
+   [
+    "支付宝",
+    "switch",
+    "关"
+   ]
+  ],
+  "filters": null,
+  "note": "审计未打开，字段为推断",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "插件",
+  "id": "ad_editor",
+  "t": "配置 · 富文本编辑器",
+  "old": "插件管理 › 富文本编辑器 › 配置",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "工具栏",
+    "text",
+    "默认"
+   ],
+   [
+    "图片上传",
+    "select",
+    "OSS"
+   ]
+  ],
+  "filters": null,
+  "note": "审计未打开，字段为推断",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "插件",
+  "id": "ad_cloud",
+  "t": "配置 · 云储存整合",
+  "old": "插件管理 › 云储存整合 › 配置",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "存储引擎",
+    "select",
+    "alioss"
+   ],
+   [
+    "AccessKey Secret",
+    "secret",
+    "••••••••"
+   ]
+  ],
+  "filters": null,
+  "note": "审计未打开，字段为推断",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "插件",
+  "id": "versions",
+  "t": "App 版本管理",
+  "old": "剧场·配置 › 版本管理",
+  "st": "保留",
+  "k": "table",
+  "cols": [
+   "ID",
+   "平台",
+   "版本号",
+   "下载地址",
+   "强制更新",
+   "发布时间"
+  ],
+  "fields": null,
+  "filters": [
+   "关键词",
+   "状态",
+   "时间范围"
+  ],
+  "note": "",
+  "tabs": null
+ },
+ {
+  "g": "系统与安全",
+  "s": "个人",
+  "id": "profile",
+  "t": "个人资料",
+  "old": "常规 › 个人资料",
+  "st": "保留",
+  "k": "form",
+  "cols": null,
+  "fields": [
+   [
+    "昵称",
+    "text",
+    "Admin"
+   ],
+   [
+    "邮箱",
+    "text",
+    ""
+   ],
+   [
+    "新密码",
+    "secret",
+    ""
+   ],
+   [
+    "两步验证",
+    "switch",
+    "未开启 → 绑定"
+   ]
+  ],
+  "filters": null,
+  "note": "新版移至右上角头像菜单；个人操作日志为空",
+  "tabs": null
+ },
+ {
+  "g": "创作中心 Creator Center",
+  "s": null,
+  "id": "cc_kyc",
+  "t": "KYC 实名审核",
+  "k": "cc",
+  "perm": "cc.kyc"
+ }
+]
